@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>My Awesome Presentation</title>
+    <title>autoformatting-talk</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <style type="text/css">
       @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
@@ -14,46 +14,187 @@
         font-weight: normal;
       }
       .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+
+      .off-white { color: #f2f3f4; }
     </style>
   </head>
   <body>
     <textarea id="source">
 
+background-image: url('images/peter-gargiulo-cGNCepznaV8-unsplash.jpg')
 class: center, middle
 
-# Your Workflow & the GitHub Platform
+# .off-white[Code Formatting & You]
 
 ???
 
-Notes for the _first_ slide!
+Today, I want to talk about an often overlooked aspect of maintaining a project:
+How you format your code.
 
 ---
 
-# Agenda
+# Your New Project!
 
-1. Introduction
-2. Survey of tools and needs
-3. Looking for automation
-4. Creating an accessible and secure workflow
+<img src="images/shiny-new-project.png" width="800">
 
----
+???
 
-# Introduction
-
-      It's possible to embed images.
-![](https://cdn.shopify.com/s/files/1/0051/4802/products/mona-1_large.jpg?v=1511308586)
+There's nothing like the feeling of firing off a new project. I do this all the
+time. I especally like to do this when I need a sandbox to work in and try things
+out.
 
 ---
 
-# Survey of tools and needs
+# The Consistency Problem...
+
+* ending files w/ a newline, or not
+* consistent naming of functions, variables, Classes, and CONSTANTS
+* enforce an 80 character line limit, or don't
+* placement of braces (same line, or next line)
+* tabs v. spaces 😩
+
+???
+
+When we start a new project, we have a number of decisions to make.
+
+First, you have to make decisions on all these, or which code style guide to use.
+
+Address code consistency in code review.
 
 ---
 
-# Looking for automation
+# Code Style Guides
+
+<img src="images/javascript-style-guide-search.png" width="800">
+
+???
+
+pro: decisions are made for you
+con: you have to pick one
+
+Scroll down, there's an article comparing style guides...
+
+Just pick one. Don't think too hard about it.
 
 ---
 
-# Creating an accessible and secure workflow
+# Code Review
+
+<img src="images/trailing-whitespace-comment.png" width="800">
+
+???
+
+Do you really want to tell your colleague their indentation is off? That they
+should name their function `get_value` instead of `getValue`?
+
+---
+
+# Linters!
+
+<img src="images/npm-run-lint.png" width="800">
+
+???
+
+Run a command, get feedback.
+
+A step in the right direction. 
+
+---
+
+# Hound
+
+https://houndci.com/
+
+<img src="images/hound-example-1.png">
+
+Allow me to introduce the most annoying tool I've ever used.
+
+There's got to be a better way...
+
+---
+
+# Hound
+
+https://houndci.com/
+
+<img src="images/hound-example-2.png">
+
+---
+
+# Hound
+
+https://houndci.com/
+
+<img src="images/hound-example-3.png">
+
+???
+
+---
+
+# go: gofmt
+
+<img src="images/gofmt.png" width="800">
+
+???
+
+gofmt takes linting a step further, and corrects the problem. Welcome to the future!
+
+
+---
+
+# JavaScript: Prettier
+
+<img src="images/prettier.png" width="800">
+
+---
+
+# Java: Spotless & google-java-format
+
+<img src="images/spotless-google-java-format.png" width="800">
+
+---
+
+# Python, Ruby, etc: pre-commit & a plugin
+
+<img src="images/pre-commit.png" width="800">
+
+---
+
+class: center, middle
+
+# Influence Positive Dialog
+
+???
+
+As a project creator, you have the ability (and responsibility) to influence the
+dialog in and around your codebase. Make it quality dialog, and don't pick nits.
+
+---
+
+class: center, middle
+
+![](images/wtfs-per-minute.jpeg)
+
+---
+
+class: center, middle
+
+# Questions? Comments?
+
+???
+
+What are your experiences with managing code consistency? Were you familiar
+with code formatters before this talk? Where do you place them in your pipeline?
+
+---
+
+class: center, middle
+
+# Thanks!
+
+radavis.github.io/autoformatting-talk
+
+
 
     </textarea>
     <script src="https://remarkjs.com/downloads/remark-latest.min.js" type="text/javascript">
