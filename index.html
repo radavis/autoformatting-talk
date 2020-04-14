@@ -59,7 +59,8 @@ When we start a new project, we have a number of decisions to make.
 
 First, you have to make decisions on all these, or which code style guide to use.
 
-Address code consistency in code review.
+If you're lucky, the language you are using already has a recommended style
+guide, a la Python and pep8.
 
 ---
 
@@ -75,6 +76,8 @@ con: you have to pick one
 Scroll down, there's an article comparing style guides...
 
 Just pick one. Don't think too hard about it.
+
+Address code consistency in code review.
 
 ---
 
@@ -97,7 +100,9 @@ should name their function `get_value` instead of `getValue`?
 
 Run a command, get feedback.
 
-A step in the right direction. 
+Enforce a styleguide by giving you feedback on your code.
+
+A step in the right direction. However, sometimes the instructions are not clear.
 
 ---
 
@@ -159,6 +164,14 @@ gofmt takes linting a step further, and corrects the problem. Welcome to the fut
 # Python, Ruby, etc: pre-commit & a plugin
 
 <img src="images/pre-commit.png" width="800">
+
+---
+
+# Where does autoformatting fit into your workflow?
+
+* pre-commit
+* build process
+* pipeline
 
 ---
 
